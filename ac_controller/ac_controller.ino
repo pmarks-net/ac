@@ -24,11 +24,46 @@ const uint16_t IR_1 = 1500;  // stable range is 1130-1900ish
 // cycles) at which point it missed an entire sequence of codes,
 // which seems like a different kind of bug.
 const uint16_t IR_STOP = IR_1;
-const uint16_t IR_FAN_SPEED[] = {IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_STOP};
-const uint16_t IR_POWER[]     = {IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_STOP};
-const uint16_t IR_MODE[]      = {IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_STOP};
-const uint16_t IR_UP[]        = {IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_STOP};
-const uint16_t IR_DOWN[]      = {IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_STOP};
+const uint16_t IR_FAN_SPEED[] = {
+  IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0,
+  IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1,
+  IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0, IR_0,
+  IR_1, IR_0, IR_1, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0,
+  IR_0, IR_1, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0,
+  IR_STOP
+};
+const uint16_t IR_POWER[] = {
+  IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0,
+  IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1,
+  IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0, IR_0,
+  IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0,
+  IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0,
+  IR_STOP
+};
+const uint16_t IR_MODE[] = {
+  IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0,
+  IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1,
+  IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_0, IR_0, IR_0, IR_0,
+  IR_1, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1,
+  IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0,
+  IR_STOP
+};
+const uint16_t IR_UP[] = {
+  IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0,
+  IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1,
+  IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0, IR_0,
+  IR_1, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_0,
+  IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0,
+  IR_STOP
+};
+const uint16_t IR_DOWN[] = {
+  IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1, IR_0,
+  IR_0, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1,
+  IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0, IR_0, IR_0, IR_0, IR_0,
+  IR_0, IR_0, IR_1, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_0, IR_1,
+  IR_0, IR_1, IR_0, IR_1, IR_0, IR_0, IR_0, IR_1, IR_0, IR_1, IR_0, IR_1, IR_0,
+  IR_STOP
+};
 
 // It seems that I can't use "enum" from an .ino file
 #define ACMode int
